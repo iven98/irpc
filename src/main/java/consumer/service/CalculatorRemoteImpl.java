@@ -54,7 +54,7 @@ public class CalculatorRemoteImpl implements Calculator {
 
     public static List<String> lookupProviders(){
         List<String> address=new ArrayList<>();
-        address.add("121.4.89.235");
+        address.add("127.0.0.1");
         return address;
     }
 
