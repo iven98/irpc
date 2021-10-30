@@ -3,12 +3,9 @@ package consumer.service;
 import provider.service.Calculator;
 import request.CalculateRpcRequest;
 
-import java.io.IOException;
-import java.io.ObjectInput;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.net.Socket;
-import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +39,21 @@ public class CalculatorRemoteImpl implements Calculator {
             System.out.println("ERROR!");
             throw new InternalError();
         }
+    }
+
+    @Override
+    public int sub(int a, int b) {
+        return 0;
+    }
+
+    @Override
+    public int mul(int a, int b) {
+        return 0;
+    }
+
+    @Override
+    public int div(int a, int b) {
+        return 0;
     }
 
     public CalculateRpcRequest generateRequest(int a,int b){
