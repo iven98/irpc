@@ -5,17 +5,17 @@ import java.io.Serializable;
 public class RpcRequest implements Serializable {
 
     private static final long serialVersionUID = 6011503509272346423L;
-    public String className;
+    public Object serviceClass;
     private String methodName;
     private Class<?>[] parameterTypes;
     private Object[] arguments;
 
-    public String getClassName() {
-        return className;
+    public Object getServiceClass() {
+        return serviceClass;
     }
 
-    public void setClassName(String className) {
-        this.className = className;
+    public void setServiceClass(Object serviceClass) {
+        this.serviceClass = serviceClass;
     }
 
     public String getMethodName() {
@@ -45,8 +45,8 @@ public class RpcRequest implements Serializable {
     public RpcRequest() {
     }
 
-    public RpcRequest(String className, String methodName, Class<?>[] parameterTypes, Object[] arguments) {
-        this.className = className;
+    public RpcRequest(Object serviceClass, String methodName, Class<?>[] parameterTypes, Object[] arguments) {
+        this.serviceClass = serviceClass;
         this.methodName = methodName;
         this.parameterTypes = parameterTypes;
         this.arguments = arguments;
